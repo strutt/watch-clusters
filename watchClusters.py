@@ -102,8 +102,8 @@ def main():
 	                f.write(line)
 	
 	    if numJobsLastTime[i] > 0 and numJobsThisTime[i] == 0:
-	        # print 'Sending message'                
-                messageBody = 'Your jobs on the ' + clusterName[i] + ' cluster are complete!'
+	        #print 'Sending message'
+                messageBody = 'Your jobs on the ' + clusterNames[i] + ' cluster are complete!'
                 message = client.messages.create(to = my_number,
                                                  from_ = twilio_number,
                                                  body = messageBody)
