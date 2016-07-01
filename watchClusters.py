@@ -91,15 +91,14 @@ def main():
 	            else:
 	                print >>sys.stderr, "ERROR: %s" % error
 	
-	    else: # if the result has some lines in then update the webpage
-	        numJobsThisTime[i] = len(result)
-	        with file(outFileNames[i], 'w') as f:
+	    numJobsThisTime[i] = len(result)
+	    with file(outFileNames[i], 'w') as f:
 	            
-	            # print numJobsThisTime
+	        # print numJobsThisTime
 	                
-	            for line in result:
-	                #print line[:-1]
-	                f.write(line)
+	        for line in result:
+	            #print line[:-1]
+	            f.write(line)
 	
 	    if numJobsLastTime[i] > 0 and numJobsThisTime[i] == 0:
 	        #print 'Sending message'
